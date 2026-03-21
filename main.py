@@ -84,6 +84,11 @@ class Config:
 
     @property
     def jd_cookie(self) -> Optional[str]:
+        # 优先从环境变量读取，其次从配置文件读取
+        import os
+        env_cookie = os.environ.get("JD_COOKIE")
+        if env_cookie:
+            return env_cookie
         jd_config = self._config.get("jd") or {}
         return jd_config.get("cookie")
 

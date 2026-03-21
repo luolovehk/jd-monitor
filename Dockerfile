@@ -41,5 +41,8 @@ COPY config.yaml config.yaml
 # Create logs directory
 RUN mkdir -p /app/logs
 
+# 运行时传入Cookie: docker run -e JD_COOKIE="your-cookie" ...
+# 或使用 .env 文件
+
 # Run the application
 CMD ["python", "main.py"]

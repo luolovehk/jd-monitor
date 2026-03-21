@@ -1,0 +1,106 @@
+2026-03-21 17:39:55,225 - INFO - 检查商品: AirPods Pro (SKU: 100008348543)
+2026-03-21 17:39:55,599 - ERROR - 备用价格接口也失败: 100008348543, HTTPSConnectionPool(host='api.0s0.cn', port=443): Max retries exceeded with url: /jd/price?sku=100008348543 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))
+2026-03-21 17:39:55,721 - INFO - 检查结果: {'name': 'AirPods Pro', 'sku': '100008348543', 'price': None, 'in_stock': False, 'checked_at': '2026-03-21 17:39:55'}
+2026-03-21 17:40:35,950 - INFO - 检查商品: AirPods Pro (SKU: 100008348543)
+2026-03-21 17:40:36,705 - INFO - 检查结果: {'name': 'AirPods Pro', 'sku': '100008348543', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 17:40:36'}
+2026-03-21 17:50:56,760 - INFO - 检查商品: 100105193608
+2026-03-21 17:50:57,225 - INFO - Playwright 初始化成功
+2026-03-21 17:51:03,620 - INFO - 检查结果: {'name': 'iPhone 16', 'sku': '100105193608', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 17:51:03'}
+2026-03-21 18:05:40,073 - INFO - 检查商品: 100105193608
+2026-03-21 18:05:40,866 - INFO - Playwright 初始化成功
+2026-03-21 18:05:41,025 - ERROR - Playwright获取数据失败: 100105193608, BrowserContext.add_cookies: Cookie should have a url or a domain/path pair
+2026-03-21 18:05:41,025 - INFO - 检查结果: {'name': 'iPhone 16', 'sku': '100105193608', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:05:41'}
+2026-03-21 18:06:07,190 - INFO - 检查商品: 100105193608
+2026-03-21 18:06:07,810 - INFO - Playwright 初始化成功
+2026-03-21 18:06:08,001 - INFO - 已设置京东Cookie
+2026-03-21 18:06:15,089 - INFO - 检查结果: {'name': 'iPhone 16', 'sku': '100105193608', 'price': None, 'in_stock': True, 'checked_at': '2026-03-21 18:06:15'}
+2026-03-21 18:07:33,647 - INFO - 检查商品: 100008348543
+2026-03-21 18:07:34,079 - INFO - Playwright 初始化成功
+2026-03-21 18:07:34,121 - INFO - 已设置京东Cookie
+2026-03-21 18:08:04,127 - ERROR - Playwright获取数据失败: 100008348543, Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://item.jd.com/100008348543.html", waiting until "networkidle"
+
+2026-03-21 18:08:04,128 - INFO - 检查结果: {'name': 'AirPods Pro', 'sku': '100008348543', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:08:04'}
+2026-03-21 18:08:22,361 - INFO - 检查商品: 100008348543
+2026-03-21 18:08:22,882 - INFO - Playwright 初始化成功
+2026-03-21 18:08:22,928 - INFO - 已设置京东Cookie
+2026-03-21 18:08:25,755 - INFO - 检查结果: {'name': 'AirPods Pro', 'sku': '100008348543', 'price': None, 'in_stock': True, 'checked_at': '2026-03-21 18:08:25'}
+2026-03-21 18:09:18,854 - INFO - 检查商品: 100008348543
+2026-03-21 18:09:19,297 - INFO - Playwright 初始化成功
+2026-03-21 18:09:19,349 - INFO - 已设置京东Cookie
+2026-03-21 18:09:22,112 - INFO - 检查结果: {'name': 'AirPods Pro', 'sku': '100008348543', 'price': 288.0, 'in_stock': True, 'checked_at': '2026-03-21 18:09:22'}
+2026-03-21 18:27:24,838 - INFO - 检查商品: 100328375288
+2026-03-21 18:27:25,449 - INFO - Playwright 初始化成功
+2026-03-21 18:27:26,729 - INFO - 已设置京东Cookie
+2026-03-21 18:27:29,265 - INFO - 检查结果: {'name': 'MacBook Air 13 M5', 'sku': '100328375288', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:27:29'}
+2026-03-21 18:29:57,509 - INFO - ==================================================
+2026-03-21 18:29:57,509 - INFO - 京东商品监控程序启动
+2026-03-21 18:29:57,509 - INFO - ==================================================
+2026-03-21 18:29:57,512 - INFO - 监控间隔: 300秒
+2026-03-21 18:29:57,512 - INFO - 商品数量: 1
+2026-03-21 18:29:57,512 - INFO - ------------------------------
+2026-03-21 18:29:57,512 - INFO - 开始检查: 2026-03-21 18:29:57
+2026-03-21 18:29:57,512 - INFO - 检查商品: 100328375288
+2026-03-21 18:29:58,085 - INFO - Playwright 初始化成功
+2026-03-21 18:29:59,377 - INFO - 已设置京东Cookie
+2026-03-21 18:30:01,968 - INFO - 检查结果: {'name': 'MacBook Air 13 M5', 'sku': '100328375288', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:30:01'}
+2026-03-21 18:30:04,028 - INFO - 没有变化
+2026-03-21 18:30:04,033 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-21 18:30:04,033 - INFO - 定时任务已启动，每300秒检查一次
+2026-03-21 18:30:04,033 - INFO - 按 Ctrl+C 停止
+2026-03-21 18:30:04,034 - INFO - Added job "main.<locals>.job" to job store "default"
+2026-03-21 18:30:04,034 - INFO - Scheduler started
+2026-03-21 18:35:04,043 - INFO - Running job "main.<locals>.job (trigger: interval[0:05:00], next run at: 2026-03-21 18:35:04 CST)" (scheduled at 2026-03-21 18:35:04.033730+08:00)
+2026-03-21 18:35:04,045 - INFO - ------------------------------
+2026-03-21 18:35:04,045 - INFO - 开始检查: 2026-03-21 18:35:04
+2026-03-21 18:35:04,046 - INFO - 检查商品: 100328375288
+2026-03-21 18:35:05,141 - INFO - Playwright 初始化成功
+2026-03-21 18:35:07,158 - INFO - 已设置京东Cookie
+2026-03-21 18:35:09,737 - INFO - 检查结果: {'name': 'MacBook Air 13 M5', 'sku': '100328375288', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:35:09'}
+2026-03-21 18:35:11,819 - INFO - 没有变化
+2026-03-21 18:35:11,819 - INFO - Job "main.<locals>.job (trigger: interval[0:05:00], next run at: 2026-03-21 18:40:04 CST)" executed successfully
+2026-03-21 18:35:46,928 - INFO - ==================================================
+2026-03-21 18:35:46,928 - INFO - 京东商品监控程序启动
+2026-03-21 18:35:46,929 - INFO - ==================================================
+2026-03-21 18:35:46,931 - INFO - 监控间隔: 300秒
+2026-03-21 18:35:46,931 - INFO - 商品数量: 1
+2026-03-21 18:35:46,932 - INFO - ------------------------------
+2026-03-21 18:35:46,932 - INFO - 开始检查: 2026-03-21 18:35:46
+2026-03-21 18:35:46,932 - INFO - 检查商品: 100328375288
+2026-03-21 18:35:48,082 - INFO - Playwright 初始化成功
+2026-03-21 18:35:49,463 - INFO - 已设置京东Cookie
+2026-03-21 18:35:52,012 - INFO - 检查结果: {'name': 'MacBook Air 13 M5', 'sku': '100328375288', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:35:52'}
+2026-03-21 18:35:54,090 - INFO - 没有变化
+2026-03-21 18:35:54,093 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-21 18:35:54,093 - INFO - 定时任务已启动，每300秒检查一次
+2026-03-21 18:35:54,093 - INFO - 按 Ctrl+C 停止
+2026-03-21 18:35:54,094 - INFO - Added job "main.<locals>.job" to job store "default"
+2026-03-21 18:35:54,094 - INFO - Scheduler started
+2026-03-21 18:36:24,988 - INFO - 飞书通知发送成功
+2026-03-21 18:37:25,693 - INFO - ==================================================
+2026-03-21 18:37:25,693 - INFO - 京东商品监控程序启动
+2026-03-21 18:37:25,693 - INFO - ==================================================
+2026-03-21 18:37:25,696 - INFO - 商品数量: 1
+2026-03-21 18:37:25,696 - INFO - 监控时间: 每天 8:00-22:00，每小时检查一次
+2026-03-21 18:37:25,696 - INFO - ------------------------------
+2026-03-21 18:37:25,697 - INFO - 开始检查: 2026-03-21 18:37:25
+2026-03-21 18:37:25,697 - INFO - 检查商品: 100328375288
+2026-03-21 18:37:26,779 - INFO - Playwright 初始化成功
+2026-03-21 18:37:28,170 - INFO - 已设置京东Cookie
+2026-03-21 18:37:30,733 - INFO - 检查结果: {'name': 'MacBook Air 13 M5', 'sku': '100328375288', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 18:37:30'}
+2026-03-21 18:37:32,810 - INFO - 没有变化
+2026-03-21 18:37:32,816 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-21 18:37:32,816 - INFO - 定时任务已启动，每天 8:00-21:00 每小时检查一次
+2026-03-21 18:37:32,816 - INFO - 按 Ctrl+C 停止
+2026-03-21 18:37:32,819 - INFO - Added job "main.<locals>.job" to job store "default"
+2026-03-21 18:37:32,820 - INFO - Scheduler started
+2026-03-21 19:00:00,008 - INFO - Running job "main.<locals>.job (trigger: cron[hour='8-21', minute='0'], next run at: 2026-03-21 19:00:00 CST)" (scheduled at 2026-03-21 19:00:00+08:00)
+2026-03-21 19:00:00,011 - INFO - ------------------------------
+2026-03-21 19:00:00,011 - INFO - 开始检查: 2026-03-21 19:00:00
+2026-03-21 19:00:00,012 - INFO - 检查商品: 100328375288
+2026-03-21 19:00:01,111 - INFO - Playwright 初始化成功
+2026-03-21 19:00:02,493 - INFO - 已设置京东Cookie
+2026-03-21 19:00:05,181 - INFO - 检查结果: {'name': 'MacBook Air 13 M5', 'sku': '100328375288', 'price': None, 'in_stock': None, 'checked_at': '2026-03-21 19:00:05'}
+2026-03-21 19:00:07,262 - INFO - 没有变化
+2026-03-21 19:00:07,262 - INFO - Job "main.<locals>.job (trigger: cron[hour='8-21', minute='0'], next run at: 2026-03-21 20:00:00 CST)" executed successfully

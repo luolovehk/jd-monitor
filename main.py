@@ -422,7 +422,7 @@ def main():
     # 加载配置
     config = Config()
     logger.info(f"商品数量: {len(config.products)}")
-    logger.info(f"监控时间: 每天 8:00-22:00，每小时检查一次")
+    logger.info(f"监控时间: 24小时，每2分钟检查一次")
 
     # 初始化
     monitor = JDMoitor(config)
@@ -430,16 +430,8 @@ def main():
 
     def job():
         """定时任务"""
-        now = datetime.now()
-        hour = now.hour
-
-        # 检查是否在监控时间范围内 (8:00-22:00)
-        if hour < 8 or hour >= 22:
-            logger.info(f"当前时间 {hour}:00，不在监控时间范围内 (8:00-22:00)，跳过")
-            return
-
         logger.info("-" * 30)
-        logger.info(f"开始检查: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+        logger.info(f"开始检查: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
         try:
             changes = monitor.check_changes()
@@ -475,11 +467,11 @@ def main():
     # 立即执行一次
     job()
 
-    # 启动定时任务 - 每小时执行一次
+    # 启动定时任务 - 每2分钟执行一次，24小时不间断
     scheduler = BlockingScheduler()
-    scheduler.add_job(job, "cron", hour="8-21", minute=0, id="jd_monitor")
+    scheduler.add_job(job, "interval", minutes=2, id="jd_monitor")
 
-    logger.info("定时任务已启动，每天 8:00-21:00 每小时检查一次")
+    logger.info("定时任务已启动，每2分钟检查一次")
     logger.info("按 Ctrl+C 停止")
 
     try:

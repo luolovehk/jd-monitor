@@ -357,35 +357,32 @@ class FeishuNotifier:
     def __init__(self, webhook_url: str):
         self.webhook_url = webhook_url
 
-    def send(self, message: str) -> bool:
+    def send(self, title: str, message: str) -> bool:
         """发送消息"""
         if not self.webhook_url:
             logger.warning("未配置飞书webhook，跳过通知")
             return False
 
         try:
-            payload = {
-                "msg_type": "text",
-                "content": {
-                    "text": message
-                }
+            # 构建警告信息
+            warning = {
+                "title": title,
+                "description": message
             }
-
+            
             response = requests.post(
-                self.webhook_url,
-                json=payload,
-                headers={"Content-Type": "application/json"},
+                "https://so.0668.live/yujing2",
+                data=f"#{warning['title']}\n{warning['description']}".encode("utf-8"),
+                headers={
+                    "Authorization": "Bearer tk_q2yq5ber32skfyigcpyhgqryk8z53",
+                    "Content-Type": "text/plain; charset=utf-8"
+                },
                 timeout=10,
             )
 
             if response.status_code == 200:
-                result = response.json()
-                if result.get("code") == 0:
-                    logger.info("飞书通知发送成功")
-                    return True
-                else:
-                    logger.error(f"飞书通知失败: {result}")
-                    return False
+                logger.info("飞书通知发送成功")
+                return True
             else:
                 logger.error(f"飞书通知HTTP错误: {response.status_code}")
                 return False
@@ -399,21 +396,21 @@ class FeishuNotifier:
         change = new_price - old_price
         direction = "上涨" if change > 0 else "下降"
 
-        message = f"""【价格变动】
-商品: {product}
+        title = "价格变动"
+        message = f"""商品: {product}
 价格: {old_price:.2f} → {new_price:.2f} ({direction}{abs(change):.2f}元)
 时间: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"""
 
-        return self.send(message)
+        return self.send(title, message)
 
     def send_stock_change(self, product: str, old_status: str, new_status: str) -> bool:
         """发送库存变动通知"""
-        message = f"""【库存变动】
-商品: {product}
+        title = "库存变动"
+        message = f"""商品: {product}
 状态: {old_status} → {new_status}
 时间: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"""
 
-        return self.send(message)
+        return self.send(title, message)
 
 
 def main():
